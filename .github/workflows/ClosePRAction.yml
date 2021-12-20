@@ -1,0 +1,23 @@
+name: 'Close all PRs '
+on:
+  pull_request_target:
+    types: opened
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v4
+        with:
+           stale-pr-message: 'PRs to this repo are blocked. Please read README for more info.'
+           close-pr-message: 'The PR is now automatically closed by Github Action' 
+           days-before-stale: '0'
+           days-before-close: '0'
+           stale-pr-label: 'Blocked'
+           remove-stale-when-updated: 'false'
+           debug-only: 'true'
+           exempt-assignees: 'openpublishbuild'
+           ignore-updates: 'true'
+    outputs:
+      staled-issues-prs:
+         description: 'List of all blocked issues and pull requests.'
