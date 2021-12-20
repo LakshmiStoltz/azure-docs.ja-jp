@@ -18,6 +18,4 @@ jobs:
            debug-only: 'true'
            exempt-assignees: 'openpublishbuild'
            ignore-updates: 'true'
-    outputs:
-      staled-issues-prs:
-         description: 'List of all blocked issues and pull requests.'
+   
