@@ -7,6 +7,10 @@ jobs:
   stale:
     runs-on: ubuntu-latest
     steps:
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+      - run: echo ${{steps.date.outputs.date}}  
       - uses: actions/stale@v4
         with:
            stale-pr-message: 'PRs to this repo are blocked. Please read README for more info.'
@@ -18,5 +22,5 @@ jobs:
            debug-only: 'true'
            exempt-assignees: 'openpublishbuild'
            ignore-updates: 'true'
-           start-date: $(date +'%Y-%m-%d')
+           start-date: ${{steps.date.outputs.date}} 
    
