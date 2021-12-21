@@ -18,5 +18,5 @@ jobs:
            debug-only: 'true'
            exempt-assignees: 'openpublishbuild'
            ignore-updates: 'true'
-           start-date: $(date)
+           start-date: $(date +'%Y-%m-%d')
    
