@@ -20,7 +20,7 @@ jobs:
            stale-pr-label: 'Blocked'
            remove-stale-when-updated: 'false'
            debug-only: 'false'
-           exempt-assignees: 'openpublishbuild,lastoltz'
+           exempt-assignees: 'openpublishbuild,lakshmistoltz'
            ignore-updates: 'true'
            start-date: ${{steps.date.outputs.date}} 
    
