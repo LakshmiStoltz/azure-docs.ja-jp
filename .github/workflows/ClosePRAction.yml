@@ -19,7 +19,7 @@ jobs:
            days-before-close: '0'
            stale-pr-label: 'Blocked'
            remove-stale-when-updated: 'false'
-           debug-only: 'true'
+           debug-only: 'false'
            exempt-assignees: 'openpublishbuild'
            ignore-updates: 'true'
            start-date: ${{steps.date.outputs.date}} 
